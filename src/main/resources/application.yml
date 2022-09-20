@@ -14,3 +14,7 @@ spring:
       path: /h2-console
     datasource:
       driver-class-name: org.h2.Driver
+server:
+  servlet:
+    encoding:
+      force-response: true
