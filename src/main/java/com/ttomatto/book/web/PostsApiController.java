@@ -6,6 +6,8 @@ import com.ttomatto.book.web.dto.PostsResponseDto;
 import com.ttomatto.book.web.dto.PostsSaveRequestDto;
 import com.ttomatto.book.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
@@ -13,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 public class PostsApiController {
 
     private final PostsService postsService;
+
+    private final Logger log = LoggerFactory.getLogger(getClass());
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
